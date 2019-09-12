@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+        {% if title %}
+            <title>Web Blog - {{ title }}</title>
+        {% else %}
+            <title>Web Blog</title>
+        {% endif %}
+    <style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        text-align: center;
+        height: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-inline-start: 34px;
+    }
+    li {
+        display: inline;
+        margin-right: 2em;
+        text-decoration: none;
+    }
+    a:link {
+        text-decoration: none;
+    }
+    
+    a:visited {
+        text-decoration: none;
+        color: white;
+    }
+    a:hover {
+        text-decoration-color: none;
+        color: gray;
+    }
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #wrapper {
+        margin-top: 15em;
+        background-color: black;
+    }
+    </style>
+</head>
+<body id="wrapper">
+    <a href="/blog">
+    <img src="{{ image }}" alt="Brand Logo" width="300">
+    </a>
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/music">Music</a></li>
+        <li><a href="/art">Art</a></li>
+    </ul>
+
+</body>
+</html>
+
